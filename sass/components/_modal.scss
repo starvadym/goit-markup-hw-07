@@ -46,6 +46,7 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform $transition-time $transition-function;
 }
+
 /* Стили и позиционирование кнопки закрытия модального окна */
 
 .button-close {
@@ -77,6 +78,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .feedback-slogan {
   font-family: Roboto;
   font-style: normal;
@@ -86,50 +88,37 @@
   text-align: center;
   letter-spacing: 0.03em;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 
-  color: $primary-text-color;
+  color: #212121;
 }
+
 /* Стили форм */
 
 /* Общая форма с полями */
 
-.feedback-container.first {
-  position: relative;
-  margin-bottom: 28px;
-}
 .feedback-container {
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 }
 
 .feedback-container.last {
-  margin-bottom: 16px;
-}
-/* Названия полей форм */
-
-.feedback__label {
-  position: absolute;
-  padding: 0;
-  top: -20px;
-  left: 0;
-}
-
-feedback__label--last {
+  position: relative;
   margin-bottom: 20px;
 }
 
-// .feedback-last {
-//   margin-top: 20px;
-//   margin-bottom: 30px;
-// }
+/* Названия полей форм */
+
+.feedback__label--last {
+  margin-bottom: 20px;
+}
 
 /*Стили полей для имени, почты и телефона  */
 
 .feedback__input {
   padding: 0;
   margin: 0;
-  width: 100%;
+  width: 448px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -167,13 +156,15 @@ feedback__label--last {
   letter-spacing: 0.01em;
   resize: none;
   color: rgba(117, 117, 117, 0.5);
+  display: block;
+  margin-bottom: 20px;
 }
 
 /* Стили надписи полей*/
 
 .feedback__label {
-  display: inline-block;
-  /* margin-bottom: 4px; */
+  display: block;
+  margin-bottom: 4px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -183,12 +174,6 @@ feedback__label--last {
   letter-spacing: 0.01em;
 
   color: #757575;
-}
-
-.feedback__label--last {
-  position: absolute;
-  left: 0;
-  top: -20px;
 }
 
 /* Стили ссылки */
@@ -237,6 +222,13 @@ feedback__label--last {
   border: 1px solid #2196f3;
 }
 
+/* Стиль иконки в кнопке футера */
+
+.icon2 {
+  fill: #fff;
+  margin-left: 10px;
+}
+
 /* Согласие с условиями рассылки */
 
 .feedback__label--check {
@@ -245,6 +237,7 @@ feedback__label--last {
   justify-content: space-evenly;
   margin-bottom: 30px;
 }
+/* Стиль для чекбокса */
 
 .feedback__icon {
   display: block;
@@ -265,35 +258,4 @@ feedback__label--last {
   background-size: contain;
   background-origin: border-box;
   border: 2px solid transparent;
-}
-/* Стиль кнопки Отправки модальной формы */
-
-.feedback__button {
-  display: block;
-  margin: 0 auto;
-  width: 200px;
-  height: 50px;
-
-  align-items: center;
-  text-align: center;
-
-  background: $static-color;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  color: $primary-white-color;
-  cursor: pointer;
-  transition: background $transition-time $transition-function;
-}
-
-.feedback__button:hover,
-.feedback__button:focus {
-  background: $accent-color;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
 }

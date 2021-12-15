@@ -253,9 +253,10 @@ body {
 .activity {
   margin: 0 auto;
   padding-top: 0;
+  /* Горизонтальное размещение Flex */
+  /* Тескт поверх картинок секции преимущества */
 }
 
-/* Горизонтальное размещение Flex */
 .activity__list {
   list-style-type: none;
   display: -webkit-box;
@@ -263,11 +264,6 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
-}
-
-/* Очистка отступа элемента */
-.activity__item + .activity__item {
-  margin-left: 30px;
 }
 
 .activity__title {
@@ -282,7 +278,6 @@ body {
   color: #212121;
 }
 
-/* Тескт поверх картинок секции преимущества */
 .activity__label {
   display: block;
   width: 370px;
@@ -295,6 +290,11 @@ body {
   text-transform: uppercase;
   background: rgba(47, 48, 58, 0.8);
   color: #ffffff;
+}
+
+/* Очистка отступа элемента */
+.activity__item + .activity__item {
+  margin-left: 30px;
 }
 
 /* Контейнер для оформления */
@@ -1133,35 +1133,24 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   color: #212121;
 }
 
 /* Стили форм */
 /* Общая форма с полями */
-.feedback-container.first {
-  position: relative;
-  margin-bottom: 28px;
-}
-
 .feedback-container {
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 }
 
 .feedback-container.last {
-  margin-bottom: 16px;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 /* Названия полей форм */
-.feedback__label {
-  position: absolute;
-  padding: 0;
-  top: -20px;
-  left: 0;
-}
-
-feedback__label--last {
+.feedback__label--last {
   margin-bottom: 20px;
 }
 
@@ -1209,12 +1198,14 @@ feedback__label--last {
   letter-spacing: 0.01em;
   resize: none;
   color: rgba(117, 117, 117, 0.5);
+  display: block;
+  margin-bottom: 20px;
 }
 
 /* Стили надписи полей*/
 .feedback__label {
-  display: inline-block;
-  /* margin-bottom: 4px; */
+  display: block;
+  margin-bottom: 4px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -1222,12 +1213,6 @@ feedback__label--last {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: #757575;
-}
-
-.feedback__label--last {
-  position: absolute;
-  left: 0;
-  top: -20px;
 }
 
 /* Стили ссылки */
@@ -1273,6 +1258,12 @@ feedback__label--last {
   border: 1px solid #2196f3;
 }
 
+/* Стиль иконки в кнопке футера */
+.icon2 {
+  fill: #fff;
+  margin-left: 10px;
+}
+
 /* Согласие с условиями рассылки */
 .feedback__label--check {
   display: -webkit-box;
@@ -1287,6 +1278,7 @@ feedback__label--last {
   margin-bottom: 30px;
 }
 
+/* Стиль для чекбокса */
 .feedback__icon {
   display: block;
   width: 15px;
@@ -1306,39 +1298,5 @@ feedback__label--last {
   background-size: contain;
   background-origin: border-box;
   border: 2px solid transparent;
-}
-
-/* Стиль кнопки Отправки модальной формы */
-.feedback__button {
-  display: block;
-  margin: 0 auto;
-  width: 200px;
-  height: 50px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  background: #2196f3;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  color: #ffffff;
-  cursor: pointer;
-  -webkit-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.feedback__button:hover,
-.feedback__button:focus {
-  background: #188ce8;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
 }
 /*# sourceMappingURL=main.css.map */

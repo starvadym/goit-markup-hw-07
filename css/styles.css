@@ -1037,7 +1037,7 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 
   color: #212121;
 }
@@ -1046,28 +1046,24 @@ body {
 
 /* Общая форма с полями */
 
-.feedback-container.first {
-  position: relative;
-  margin-bottom: 28px;
-}
-
 .feedback-container {
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 }
 
 .feedback-container.last {
-  margin-bottom: 16px;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 /* Названия полей форм */
 
-.feedback__label {
+/* .feedback__label {
   position: absolute;
   padding: 0;
   top: -20px;
   left: 0;
-}
+} */
 
 .feedback__label--last {
   margin-bottom: 20px;
@@ -1121,13 +1117,15 @@ body {
   letter-spacing: 0.01em;
   resize: none;
   color: rgba(117, 117, 117, 0.5);
+  display: block;
+  margin-bottom: 20px;
 }
 
 /* Стили надписи полей*/
 
 .feedback__label {
-  display: inline-block;
-  /* margin-bottom: 4px; */
+  display: block;
+  margin-bottom: 4px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -1137,12 +1135,6 @@ body {
   letter-spacing: 0.01em;
 
   color: #757575;
-}
-
-.feedback__label--last {
-  position: absolute;
-  left: 0;
-  top: -20px;
 }
 
 /* Стили ссылки */
@@ -1207,14 +1199,6 @@ body {
   margin-bottom: 30px;
 }
 /* Стиль для чекбокса */
-
-/* .style-icon {
-  position: absolute;
-  bottom: 124px;
-  left: 54px;
-  fill: #212121;
-   transition: fill var(--transition-time) var(--transition-function);
-  }  */
 
 .feedback__icon {
   display: block;
