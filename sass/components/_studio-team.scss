@@ -6,65 +6,64 @@
 .team {
   margin: 0 auto;
   background-color: $filter-static-color;
-}
 
-/* Стиль карточки участника команды студии */
+  /* Стиль карточки участника команды студии */
 
-.team__item {
-  width: 270px;
-  height: 428px;
-  background: #ffffff;
-  /* material shadow v1 */
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
+  &__item {
+    width: 270px;
+    height: 428px;
+    background: #ffffff;
+    /* material shadow v1 */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
 
-/* Горизонтальное размещение Flex */
-.team__list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-.team__title {
-  margin: 0;
-  margin-bottom: 50px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.167;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: $primary-text-color;
-}
+  /* Горизонтальное размещение Flex */
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 50px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.167;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+  }
 
-/* Стиль текста - имя */
-.team__member {
-  margin: 0;
-  margin-bottom: 10px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.188;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: $primary-text-color;
-}
+  /* Стиль текста - имя */
+  &__member {
+    margin: 0;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.188;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+  }
 
-/* Стиль текста - название должности*/
-.team__position {
-  margin: 0;
-  margin-bottom: 16px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.188;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: $secondary-text-color;
+  /* Стиль текста - название должности*/
+  &__position {
+    margin: 0;
+    margin-bottom: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.188;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $secondary-text-color;
+  }
 }
-
 .team-cont {
   padding-top: 30px;
   padding-bottom: 30px;

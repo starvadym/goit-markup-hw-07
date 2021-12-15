@@ -133,9 +133,9 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  /* Стиль слогана */
 }
 
-/* Стиль слогана */
 .slogan__statement {
   margin: 0px auto;
   max-width: 696px;
@@ -178,8 +178,7 @@ body {
   color: #fff;
 }
 
-.slogan__button:hover,
-.slogan__button:focus {
+.slogan__button:hover, .slogan__button:focus {
   background-color: #188ce8;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -190,9 +189,9 @@ body {
 /* Секция - Преимущества студии */
 .advantages {
   margin: 0 auto;
+  /* Горизонтальное размещение Flex */
 }
 
-/* Горизонтальное размещение Flex */
 .advantages__list {
   list-style-type: none;
   display: -webkit-box;
@@ -200,29 +199,6 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
-}
-
-.advantages__item + .advantages__item {
-  margin-left: 30px;
-}
-
-/* Преимущества */
-/* Стили текста заголовков и абзацев */
-.advtgs-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 270px;
-  height: 120px;
-  background: #f5f4fa;
-  border-radius: 4px;
-  margin-bottom: 30px;
 }
 
 .advantages__item {
@@ -247,6 +223,29 @@ body {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+.advantages__item + .advantages__item {
+  margin-left: 30px;
+}
+
+/* Преимущества */
+/* Стили текста заголовков и абзацев */
+.advtgs-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 
 /* Секция - Чем мы занимаемся */
@@ -312,18 +311,6 @@ body {
 }
 
 /* Секция клиенты */
-.clients__title {
-  margin: 0;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.167;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-  margin-bottom: 50px;
-}
-
 .clients {
   margin: 0 auto;
 }
@@ -337,8 +324,16 @@ body {
   margin: 0;
 }
 
-.clients__item + .clients__item {
-  margin-left: 30px;
+.clients__title {
+  margin: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 50px;
 }
 
 .clients__link {
@@ -363,6 +358,10 @@ body {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.clients__item + .clients__item {
+  margin-left: 30px;
+}
+
 .clients__item .clients__link:hover,
 .clients__item .clients__link:focus {
   border: 1px solid #2196f3;
@@ -379,9 +378,12 @@ body {
 .team {
   margin: 0 auto;
   background-color: #f5f4fa;
+  /* Стиль карточки участника команды студии */
+  /* Горизонтальное размещение Flex */
+  /* Стиль текста - имя */
+  /* Стиль текста - название должности*/
 }
 
-/* Стиль карточки участника команды студии */
 .team__item {
   width: 270px;
   height: 428px;
@@ -392,7 +394,6 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-/* Горизонтальное размещение Flex */
 .team__list {
   list-style-type: none;
   margin: 0;
@@ -414,7 +415,6 @@ body {
   color: #212121;
 }
 
-/* Стиль текста - имя */
 .team__member {
   margin: 0;
   margin-bottom: 10px;
@@ -427,7 +427,6 @@ body {
   color: #212121;
 }
 
-/* Стиль текста - название должности*/
 .team__position {
   margin: 0;
   margin-bottom: 16px;
@@ -516,7 +515,7 @@ body {
       flex-wrap: wrap;
 }
 
-.projects__list .projects__item {
+.projects__item {
   width: 370px;
   height: 404px;
   background: #ffffff;
@@ -857,7 +856,7 @@ body {
   background: #2f303a;
 }
 
-.studio {
+.footer-style__logo {
   color: #ffffff;
 }
 
@@ -1011,7 +1010,7 @@ body {
   cursor: pointer;
 }
 
-.feedback__button.subs {
+.feedback__button.feedback__button--subs {
   margin: 0;
   margin-top: 20px;
   margin-left: 12px;
@@ -1182,7 +1181,7 @@ body {
   cursor: pointer;
 }
 
-.feedback__mail:hover {
+.feedback__input:hover {
   border: 1px solid #2196f3;
 }
 

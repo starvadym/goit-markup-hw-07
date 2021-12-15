@@ -60,14 +60,14 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: #ffffff;
   cursor: pointer;
-}
 
-.button-close:hover .button-close__icon {
-  fill: #2196f3;
-}
+  &:hover .button-close__icon {
+    fill: $static-color;
+  }
 
-.button-close:focus .button-close__icon {
-  fill: #2196f3;
+  &:focus .button-close__icon {
+    fill: $static-color;
+  }
 }
 
 .button-close__icon {
@@ -90,7 +90,7 @@
   margin: 0;
   margin-bottom: 12px;
 
-  color: #212121;
+  color: $primary-text-color;
 }
 
 /* Стили форм */
@@ -124,23 +124,23 @@
   box-sizing: border-box;
   border-radius: 4px;
   transition: border $transition-time $transition-function;
-}
 
-.feedback__input:hover ~ .feedback__icon1 {
-  fill: #2196f3;
-  cursor: pointer;
-}
+  &:hover ~ .feedback__icon1 {
+    fill: $static-color;
+    cursor: pointer;
+  }
 
-.feedback__input:focus ~ .feedback__icon1 {
-  fill: #2196f3;
-}
+  &:focus ~ .feedback__icon1 {
+    fill: $static-color;
+  }
 
-.feedback__input:hover {
-  border: 1px solid #2196f3;
-  cursor: pointer;
-}
-.feedback__mail:hover {
-  border: 1px solid #2196f3;
+  &:hover {
+    border: 1px solid $static-color;
+    cursor: pointer;
+  }
+  &:hover {
+    border: 1px solid $static-color;
+  }
 }
 
 /* Поле для комментариев */

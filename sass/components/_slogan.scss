@@ -14,54 +14,54 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
 
-/* Стиль слогана */
+  /* Стиль слогана */
 
-.slogan__statement {
-  margin: 0px auto;
-  max-width: 696px;
-  max-height: 120px;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.363;
-  /* text-align: center; */
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #fff;
-}
+  &__statement {
+    margin: 0px auto;
+    max-width: 696px;
+    max-height: 120px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.363;
+    /* text-align: center; */
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+  }
 
-.slogan__button {
-  /* Стиль кнопки - заказать работу */
+  &__button {
+    /* Стиль кнопки - заказать работу */
 
-  display: inline-block;
-  width: 200px;
-  height: 50px;
-  background: $static-color;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  margin-top: 30px;
-  transition: background $transition-time $transition-function;
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    background: $static-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin-top: 30px;
+    transition: background $transition-time $transition-function;
 
-  /* Стиль текста кнопки- Заказать услугу */
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.875;
-  display: inline-block;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  border: 0;
-  padding: 0;
-  color: #fff;
-}
+    /* Стиль текста кнопки- Заказать услугу */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.875;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    border: 0;
+    padding: 0;
+    color: #fff;
+  }
 
-.slogan__button:hover,
-.slogan__button:focus {
-  background-color: $accent-color;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  cursor: pointer;
+  &__button:hover,
+  &__button:focus {
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+  }
 }

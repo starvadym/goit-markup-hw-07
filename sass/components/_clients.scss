@@ -1,46 +1,45 @@
 /* Секция клиенты */
 
-.clients__title {
-  margin: 0;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.167;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: $primary-text-color;
-  margin-bottom: 50px;
-}
-
 .clients {
   margin: 0 auto;
-}
 
-.clients__list {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
+  &__list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__title {
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.167;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+    margin-bottom: 50px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 170px;
+    height: 90px;
+
+    border: 1px solid #afb1b8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    fill: #afb1b8;
+    transition: border $transition-time $transition-function,
+      fill $transition-time $transition-function;
+  }
 }
 
 .clients__item + .clients__item {
   margin-left: 30px;
-}
-
-.clients__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  width: 170px;
-  height: 90px;
-
-  border: 1px solid #afb1b8;
-  box-sizing: border-box;
-  border-radius: 4px;
-  fill: #afb1b8;
-  transition: border $transition-time $transition-function,
-    fill $transition-time $transition-function;
 }
 
 .clients__item .clients__link:hover,
