@@ -1,0 +1,73 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: $primary-text-color;
+}
+.contacts__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* Весь внутренний контент оборачиваем в специальный контейнер */
+/* Указываем заданную ширину области контента, а также центрируем */
+
+.container {
+  width: 1200px;
+  margin: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  /* outline: 2px solid tomato; */
+}
+
+/* Отступы для внутреннего контента секций страницы */
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: $primary-white-color;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.advantages__list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.activity__list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+/* Удаление нижнего зазора у изображения*/
+
+.image-freegap {
+  display: block;
+}
+.team__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.clients__list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,185 @@
+.page-header {
+  margin: 0 auto;
+  background-color: $primary-white-color;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #ececec;
+}
+
+/* Вспомогательная обводка границ блока */
+
+.logo {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+  letter-spacing: 0.03em;
+  color: #000000;
+  text-decoration: none;
+}
+.footer-style .logo {
+  display: inline-block;
+}
+
+.logoweb {
+  color: #2196f3;
+}
+.footer-style__logo {
+  color: #ffffff;
+}
+
+/* Меню навигации */
+/* Базовый стиль ссылок */
+/* Расширение границ */
+
+.nav .nav__link {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  /* Оформление текста */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+  transition: color $transition-time $transition-function;
+  text-decoration: none;
+}
+
+/* Применение свойств flex контейнера */
+
+.nav {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 93px;
+}
+
+.page-header * {
+  display: flex;
+  align-items: center;
+}
+
+/* Удаление зазора у крайнего элемента*/
+
+.nav .nav__item + .nav__item {
+  margin-left: 50px;
+}
+
+/* Стили ссылок при наведении */
+
+.nav .nav__link:hover,
+.nav .nav__link:focus {
+  color: $static-color;
+  text-decoration: none;
+}
+
+/* Подсветка ссылки текущей страницы */
+
+.nav__link.primary {
+  color: $static-color;
+  text-decoration: none;
+}
+/* Подчеркивание текущей страницы */
+
+.primary::after {
+  content: "";
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  border-top-width: 4px;
+  border-top-style: solid;
+  border-top-color: #2196f3;
+  position: absolute;
+  top: 76px;
+  margin-left: -48px;
+}
+
+.primary.portfolio::after {
+  content: "";
+  width: 78px;
+  height: 4px;
+  border-radius: 2px;
+  border-top-width: 4px;
+  border-top-style: solid;
+  border-top-color: #2196f3;
+  position: absolute;
+  top: 76px;
+  margin-left: -78px;
+}
+
+.nav__link.secondary {
+  color: $primary-text-color;
+  text-decoration: none;
+}
+.envelope {
+  display: block;
+  fill: #757575;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  padding-right: 10px;
+  transition: fill $transition-time $transition-function;
+}
+
+.smartphone {
+  display: block;
+  fill: #757575;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-right: 10px;
+  transition: fill $transition-time $transition-function;
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+
+  /* Оформление текста */
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+  color: $secondary-text-color;
+  transition: color $transition-time $transition-function;
+  text-decoration: none;
+}
+
+/* Удаление зазора у крайнего элемента */
+.contacts__list .contacts__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/*Окончательное позиционирование ссылок контактов */
+.contacts__list .contacts__item:first-child {
+  margin-left: 305px;
+}
+
+.contacts__list .contacts__item:hover .envelope {
+  fill: $accent-color;
+}
+.contacts__list .contacts__item:hover .contacts__link {
+  color: $accent-color;
+}
+.contacts__list .contacts__item:hover .smartphone {
+  fill: $accent-color;
+}
+.contacts__list .contacts__item:hover .contacts__link {
+  color: $accent-color;
+}
+.contacts__link:focus .envelope {
+  fill: $accent-color;
+}
+.contacts__link:focus {
+  color: $accent-color;
+}
+.contacts__link:focus .smartphone {
+  fill: $accent-color;
+}
+.contacts__link:focus {
+  color: $accent-color;
+}
