@@ -58,14 +58,14 @@
   padding: 0;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background: #ffffff;
+  background: $primary-white-color;
   cursor: pointer;
 
-  &:hover .button-close__icon {
+  &:hover &__icon {
     fill: $static-color;
   }
 
-  &:focus .button-close__icon {
+  &:focus &__icon {
     fill: $static-color;
   }
 }
@@ -173,7 +173,7 @@
 
   letter-spacing: 0.01em;
 
-  color: #757575;
+  color: $secondary-text-color;
 }
 
 /* Стили ссылки */
@@ -185,7 +185,7 @@
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: #2196f3;
+  color: $static-color;
 }
 
 /* Стили надписи в футере
@@ -199,7 +199,7 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
 
-  color: #757575;
+  color: $secondary-text-color;
 
   text-decoration: none;
 }
@@ -210,22 +210,21 @@
   position: absolute;
   top: 11px;
   left: 12px;
-  fill: #212121;
+  fill: $initial-logo-color;
   transition: fill $transition-time $transition-function;
-}
 
-.feedback__input:hover ~ .feedback__icon1 {
-  fill: #2196f3;
-  cursor: pointer;
+  .feedback__input:hover ~ & {
+    fill: $hover-icon-color;
+    cursor: pointer;
+  }
+  .feedback__input:focus {
+    border: 1px solid $hover-icon-color;
+  }
 }
-.feedback__input:focus {
-  border: 1px solid #2196f3;
-}
-
 /* Стиль иконки в кнопке футера */
 
 .icon2 {
-  fill: #fff;
+  fill: $primary-white-color;
   margin-left: 10px;
 }
 
@@ -245,17 +244,40 @@
   height: 15px;
   border: 2px solid #2a2a2a;
   border-radius: 2px;
-  background-color: #fff;
+  background-color: $primary-white-color;
   transition: border $transition-time $transition-function,
     background-color $transition-time $transition-function;
-}
 
-.feedback__checkbox:checked + .feedback__label--check .feedback__icon {
-  background-color: #2196f3;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='%23fff' stroke='%23fff' stroke-width='0.2' /%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-origin: border-box;
-  border: 2px solid transparent;
+  .feedback__checkbox:checked + .feedback__label--check & {
+    background-color: $hover-icon-color;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='%23fff' stroke='%23fff' stroke-width='0.2' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-origin: border-box;
+    border: 2px solid transparent;
+  }
+}
+/* Стиль для кнопки отправки формы */
+
+.feedback__button--modal {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+
+  align-items: center;
+  text-align: center;
+
+  background: $static-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: $primary-white-color;
+  cursor: pointer;
 }

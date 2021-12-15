@@ -28,7 +28,7 @@
     /* text-align: center; */
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #fff;
+    color: $primary-white-color;
   }
 
   &__button {
@@ -54,7 +54,7 @@
     letter-spacing: 0.06em;
     border: 0;
     padding: 0;
-    color: #fff;
+    color: $primary-white-color;
   }
 
   &__button:hover,

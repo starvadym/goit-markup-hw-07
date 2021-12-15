@@ -1,7 +1,7 @@
 /* Страница Портфолио */
 /* Меню для выбора фильтров */
 
-.projects-filter__list {
+.filter-list {
   list-style-type: none;
   padding: 0;
   margin: 0 auto;
@@ -10,13 +10,13 @@
 }
 /* Очистка крайнего отсупа элемента */
 
-.projects-filter__item + .projects-filter__item {
+.filter-list__item + .filter-list__item {
   margin-left: 8px;
 }
 
 /* Стиль текта названия кнопок */
 
-.projects-filter__button {
+.filter-list__button {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -35,41 +35,39 @@
   transition: background $transition-time $transition-function,
     box-shadow $transition-time $transition-function,
     color $transition-time $transition-function;
-}
 
-.projects-filter__button:hover,
-.projects-filter__button:focus {
-  color: $primary-white-color;
-  background: $static-color;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: $primary-white-color;
+    background: $static-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    border-width: 0;
+    cursor: pointer;
+  }
 }
 
 /* Секция - Проекты студии */
 
 .projects {
   margin: 0 auto;
+}
+.projects-list {
+  list-style-type: none;
+  padding: 0;
+  padding-top: 50px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
 
-  &__list {
-    list-style-type: none;
-    padding: 0;
-    padding-top: 50px;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-  }
   &__item {
     width: 370px;
-    height: 404px;
-    background: #ffffff;
+    background: $primary-white-color;
     margin-bottom: 30px;
     box-shadow: none;
     border: none;
-    transition: box-shadow $transition-time $transition-function,
-      border $transition-time $transition-function;
+    transition: box-shadow $transition-time $transition-function;
   }
 
   &__item:nth-last-child(-n + 3) {
@@ -81,7 +79,69 @@
   &__item:nth-child(3n) {
     margin-left: 30px;
   }
+
+  /* Стиль текста - Название проекта */
+
+  &__name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: $title-text-color;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Стиль текста - Тип проекта */
+
+  &__type {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: $secondary-text-color;
+    margin: 0;
+    padding: 0;
+    margin-top: 4px;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__item:hover,
+  &__item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  &__text {
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding: 63px 24px;
+    top: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.556;
+    letter-spacing: 0.03em;
+    background: rgba(33, 150, 243, 0.9);
+    color: $primary-white-color;
+
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: $transition-time;
+    transition-timing-function: $transition-function;
+  }
+
+  &__item:hover .projects-list__text,
+  &__item:focus .projects-list__text {
+    transform: translateY(0);
+  }
 }
+
 /* Удаление нижнего зазора у изображения*/
 
 .image-freegap {
@@ -116,75 +176,9 @@
   border-left-color: #eeeeee;
 }
 
-/* Стиль текста - Название проекта */
-
-.projects__name {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: var(--title-text-color);
-  margin: 0;
-  padding: 0;
-}
-
-/* Стиль текста - Тип проекта */
-
-.projects__type {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
-  color: $secondary-text-color;
-  margin: 0;
-  padding: 0;
-  margin-top: 4px;
-}
-
-.projects__link {
-  text-decoration: none;
-}
-
-.projects__item:hover,
-.projects__item:focus {
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-  cursor: pointer;
-}
-
 /* Оформление слайда текста с фоном поверх изображения */
 
 .projects__thumb {
   position: relative;
   overflow: hidden;
-}
-
-.projects__text {
-  position: absolute;
-  display: block;
-  margin: 0;
-  padding: 63px 24px;
-  top: 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 1.556;
-  letter-spacing: 0.03em;
-  background: rgba(33, 150, 243, 0.9);
-  color: #fff;
-
-  transform: translateY(100%);
-  transition-property: transform;
-  transition-duration: $transition-time;
-  transition-timing-function: $transition-function;
-}
-
-.projects__item:hover .projects__text,
-.projects__item:focus .projects__text {
-  transform: translateY(0);
 }

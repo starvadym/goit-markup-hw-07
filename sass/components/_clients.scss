@@ -3,13 +3,6 @@
 .clients {
   margin: 0 auto;
 
-  &__list {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-  }
-
   &__title {
     margin: 0;
     font-style: normal;
@@ -21,6 +14,13 @@
     color: $primary-text-color;
     margin-bottom: 50px;
   }
+}
+.clients-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+
   &__link {
     display: flex;
     align-items: center;
@@ -28,23 +28,21 @@
     padding: 0;
     width: 170px;
     height: 90px;
-
-    border: 1px solid #afb1b8;
+    border: 1px solid $logo-color;
     box-sizing: border-box;
     border-radius: 4px;
-    fill: #afb1b8;
+    fill: $logo-color;
     transition: border $transition-time $transition-function,
       fill $transition-time $transition-function;
   }
+  &__item &__link:hover,
+  &__item &__link:focus {
+    border: 1px solid $static-color;
+    fill: $static-color;
+    cursor: pointer;
+  }
 }
 
-.clients__item + .clients__item {
+.clients-list__item + .clients-list__item {
   margin-left: 30px;
-}
-
-.clients__item .clients__link:hover,
-.clients__item .clients__link:focus {
-  border: 1px solid #2196f3;
-  fill: #2196f3;
-  cursor: pointer;
 }

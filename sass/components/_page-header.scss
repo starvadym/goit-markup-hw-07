@@ -23,17 +23,17 @@
 }
 
 .logoweb {
-  color: #2196f3;
+  color: $static-color;
 }
 .footer-style__logo {
-  color: #ffffff;
+  color: $primary-white-color;
 }
 
 /* Меню навигации */
 /* Базовый стиль ссылок */
 /* Расширение границ */
 
-.nav .nav__link {
+.nav__link {
   display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -56,9 +56,53 @@
   margin: 0;
   padding: 0;
   margin-left: 93px;
+
+  /* Стили ссылок при наведении */
+  & .nav__link:hover,
+  & .nav__link:focus {
+    color: $static-color;
+    text-decoration: none;
+  }
+}
+.contacts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  /* Удаление зазора у крайнего элемента */
+
+  & .contacts-list__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  /*Окончательное позиционирование ссылок контактов */
+
+  & .contacts-list__item:first-child {
+    margin-left: 305px;
+  }
+
+  &__item:hover .envelope {
+    fill: $accent-color;
+  }
+  &__item:hover .smartphone {
+    fill: $accent-color;
+  }
+  &__item:hover .contacts-list__link {
+    color: $accent-color;
+  }
+  &__link:focus .envelope {
+    fill: $accent-color;
+  }
+  &__link:focus .smartphone {
+    fill: $accent-color;
+  }
+  &__link:focus {
+    color: $accent-color;
+  }
 }
 
-.page-header * {
+.wrap-container {
   display: flex;
   align-items: center;
 }
@@ -67,14 +111,6 @@
 
 .nav .nav__item + .nav__item {
   margin-left: 50px;
-}
-
-/* Стили ссылок при наведении */
-
-.nav .nav__link:hover,
-.nav .nav__link:focus {
-  color: $static-color;
-  text-decoration: none;
 }
 
 /* Подсветка ссылки текущей страницы */
@@ -92,7 +128,7 @@
   border-radius: 2px;
   border-top-width: 4px;
   border-top-style: solid;
-  border-top-color: #2196f3;
+  border-top-color: $static-color;
   position: absolute;
   top: 76px;
   margin-left: -48px;
@@ -105,7 +141,7 @@
   border-radius: 2px;
   border-top-width: 4px;
   border-top-style: solid;
-  border-top-color: #2196f3;
+  border-top-color: $static-color;
   position: absolute;
   top: 76px;
   margin-left: -78px;
@@ -117,7 +153,7 @@
 }
 .envelope {
   display: block;
-  fill: #757575;
+  fill: $secondary-text-color;
   padding-top: 34px;
   padding-bottom: 34px;
   padding-right: 10px;
@@ -126,14 +162,14 @@
 
 .smartphone {
   display: block;
-  fill: #757575;
+  fill: $secondary-text-color;
   padding-top: 32px;
   padding-bottom: 32px;
   padding-right: 10px;
   transition: fill $transition-time $transition-function;
 }
 
-.contacts__link {
+.contacts-list__link {
   display: flex;
   align-items: center;
 
@@ -147,39 +183,4 @@
   color: $secondary-text-color;
   transition: color $transition-time $transition-function;
   text-decoration: none;
-}
-
-/* Удаление зазора у крайнего элемента */
-.contacts__list .contacts__item:not(:last-child) {
-  margin-right: 30px;
-}
-
-/*Окончательное позиционирование ссылок контактов */
-.contacts__list .contacts__item:first-child {
-  margin-left: 305px;
-}
-
-.contacts__list .contacts__item:hover .envelope {
-  fill: $accent-color;
-}
-.contacts__list .contacts__item:hover .contacts__link {
-  color: $accent-color;
-}
-.contacts__list .contacts__item:hover .smartphone {
-  fill: $accent-color;
-}
-.contacts__list .contacts__item:hover .contacts__link {
-  color: $accent-color;
-}
-.contacts__link:focus .envelope {
-  fill: $accent-color;
-}
-.contacts__link:focus {
-  color: $accent-color;
-}
-.contacts__link:focus .smartphone {
-  fill: $accent-color;
-}
-.contacts__link:focus {
-  color: $accent-color;
 }

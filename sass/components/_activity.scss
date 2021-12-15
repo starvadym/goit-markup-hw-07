@@ -4,14 +4,6 @@
   margin: 0 auto;
   padding-top: 0;
 
-  /* Горизонтальное размещение Flex */
-
-  &__list {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
   &__title {
     margin: 0;
     margin-bottom: 50px;
@@ -23,6 +15,16 @@
     letter-spacing: 0.03em;
     color: $primary-text-color;
   }
+}
+
+/* Горизонтальное размещение Flex */
+
+.activity-list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
   /* Тескт поверх картинок секции преимущества */
 
   &__label {
@@ -41,7 +43,7 @@
 }
 /* Очистка отступа элемента */
 
-.activity__item + .activity__item {
+.activity-list__item + .activity-list__item {
   margin-left: 30px;
 }
 
@@ -51,7 +53,7 @@
   position: relative;
 }
 
-.thumb > .activity__label {
+.thumb > .activity-list__label {
   position: absolute;
   bottom: 0;
   right: 0;
